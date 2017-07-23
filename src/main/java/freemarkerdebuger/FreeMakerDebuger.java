@@ -21,7 +21,7 @@ public class FreeMakerDebuger {
 	public static void main(String[] args) throws Exception {
 		
 		if(args==null || args.length==0){
-			
+			System.out.println("Using defautl files");
 		}else if(args.length==2){
 			inputfile=args[0];
 			templateName=args[1];
@@ -62,7 +62,7 @@ public class FreeMakerDebuger {
 //		String id = (String) input.get("id");
 //		System.out.println(id);
 
-		Template template = cfg.getTemplate("default.ftl");
+		Template template = cfg.getTemplate(templateName);
 
 		// Write output to the console
 //		Writer consoleWriter = new OutputStreamWriter(System.out);
